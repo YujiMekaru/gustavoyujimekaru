@@ -40,7 +40,7 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-8">
-            // Skills
+            // Competências
           </h2>
 
           <div className="mb-8">

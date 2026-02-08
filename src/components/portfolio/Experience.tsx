@@ -22,7 +22,7 @@ const jobs: Job[] = [
   {
     title: "Full-Stack Developer",
     company: "MadeinWeb Ltda.",
-    period: "Jul. 2022 — Set. 2024",
+    period: "Jul. 2021 — Set. 2024",
     highlights: [
       "Atuação em 10+ projetos de clientes, do discovery até produção.",
       "Construção de novas features, manutenção e otimização de APIs alinhadas às necessidades dos clientes.",
