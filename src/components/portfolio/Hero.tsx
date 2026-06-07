@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { useI18n } from "@/i18n";
 
 const socialLinks = [
@@ -17,11 +17,6 @@ const socialLinks = [
     icon: Mail,
     href: "mailto:gustavoyujimekaru@gmail.com",
     label: "Email",
-  },
-  {
-    icon: Phone,
-    href: "tel:+5513996725438",
-    label: "Phone",
   },
 ];
 
