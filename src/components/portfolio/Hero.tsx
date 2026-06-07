@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { useI18n } from "@/i18n";
 
 const socialLinks = [
   {
@@ -25,6 +26,8 @@ const socialLinks = [
 ];
 
 const Hero = () => {
+  const { t } = useI18n();
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
     {/* Glow background effect */}
@@ -53,7 +56,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="font-mono text-primary text-sm tracking-widest uppercase mb-4">
-            Bacharel em Ciência da Computação
+            {t.hero.subtitle}
           </p>
           <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-6 text-foreground">
             Gustavo Yuji
@@ -61,12 +64,12 @@ const Hero = () => {
             <span className="text-primary">Mekaru</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-4 leading-relaxed">
-            Full-Stack Software Engineer com sólida experiência em backend e infraestrutura cloud. Construindo soluções escaláveis e eficientes.
+            {t.hero.description}
           </p>
 
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8">
             <MapPin className="w-4 h-4 text-primary" />
-            <span>São Paulo, Brazil</span>
+            <span>{t.hero.location}</span>
           </div>
         </motion.div>
 

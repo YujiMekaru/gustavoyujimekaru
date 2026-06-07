@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useI18n } from "@/i18n";
 
 const languages = ["C#", "JavaScript", "TypeScript", "Python", "SQL", "GO"];
 const technologies = [
@@ -30,6 +31,8 @@ const item = {
 };
 
 const Skills = () => {
+  const { t } = useI18n();
+
   return (
     <section id="skills" className="py-20 px-6">
       <div className="max-w-3xl mx-auto">
@@ -40,12 +43,12 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="font-mono text-primary text-sm tracking-widest uppercase mb-8">
-            // Competências
+            {t.skills.sectionTitle}
           </h2>
 
           <div className="mb-8">
             <h3 className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">
-              Linguagens
+              {t.skills.languages}
             </h3>
             <motion.div
               className="flex flex-wrap gap-2"
@@ -68,7 +71,7 @@ const Skills = () => {
 
           <div>
             <h3 className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">
-              Tecnologias & Ferramentas
+              {t.skills.technologies}
             </h3>
             <motion.div
               className="flex flex-wrap gap-2"

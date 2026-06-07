@@ -1,11 +1,14 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { useI18n } from "@/i18n";
 
 const Footer = () => {
+  const { t } = useI18n();
+
   return (
     <footer className="py-16 px-6 border-t border-border">
       <div className="max-w-3xl mx-auto text-center">
         <p className="font-mono text-primary text-sm tracking-widest uppercase mb-6">
-          // Vamos conversar
+          {t.footer.cta}
         </p>
         <a
           href="mailto:gustavoyujimekaru@gmail.com"
@@ -43,7 +46,7 @@ const Footer = () => {
         </div>
 
         <p className="text-text-dim text-xs mt-12 font-mono">
-          Desenvolvido por Gustavo Yuji Mekaru
+          {t.footer.builtBy}
         </p>
       </div>
     </footer>

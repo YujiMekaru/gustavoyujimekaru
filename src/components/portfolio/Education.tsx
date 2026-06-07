@@ -1,18 +1,10 @@
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
-
-const education = [
-  {
-    degree: "Bacharelado em Ciência da Computação",
-    school: "Universidade Tecnológica Federal do Paraná (UTFPR)",
-  },
-  {
-    degree: "Ensino Médio Técnico em Informática",
-    school: "Instituto Federal de São Paulo (IFSP)",
-  },
-];
+import { useI18n } from "@/i18n";
 
 const Education = () => {
+  const { t } = useI18n();
+
   return (
     <section className="py-20 px-6">
       <div className="max-w-3xl mx-auto">
@@ -23,11 +15,11 @@ const Education = () => {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          // Educação
+          {t.education.sectionTitle}
         </motion.h2>
 
         <div className="grid gap-6">
-          {education.map((edu, index) => (
+          {t.education.items.map((edu, index) => (
             <motion.div
               key={index}
               className="group p-6 rounded-lg bg-surface border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--primary)/0.08)]"
